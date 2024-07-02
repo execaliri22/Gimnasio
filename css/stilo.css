@@ -1,0 +1,197 @@
+/* Estilo global */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: url('https://www.thegymdowntownorlando.com/wp-content/uploads/2022/01/About-page-image-2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Fijar la imagen de fondo */
+  color: #fff;
+}
+
+/* Barra de navegación */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centrar los elementos del menú */
+  position: relative;
+}
+
+.navbar-logo {
+  width: 50px;
+  height: auto;
+  position: absolute;
+  left: 20px;
+}
+
+.navbar-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-item {
+  margin-right: 10px;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #555;
+}
+
+
+
+table{
+  width: 100%;
+}
+th, td{
+  color: #ffffff;
+}
+.borrar{
+  background-color: #111111;
+  border-radius: 50%;
+  padding:5px 10px ;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+
+/* Menú desplegable */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.dropdown-item input[type="text"],
+.dropdown-item input[type="email"],
+.dropdown-item input[type="password"] {
+  border: none;
+  border-bottom: 1px solid #ccc; 
+  width: 100%; 
+  padding: 4px 8px; 
+  box-sizing: border-box; 
+}
+
+.dropdown-item {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.dropdown-item:hover {
+  background-color: #555;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Sección de bienvenida */
+.welcome-section {
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.animated-title {
+  font-size: 2.5em;
+  margin: 0;
+  animation: fadeIn 2s ease-in-out;
+}
+
+p {
+  font-size: 1.2em;
+  margin: 20px 0;
+}
+
+strong {
+  font-size: 1.4em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  position: relative; 
+  bottom: 0;
+  margin-top: 275px;
+}
+
+.social-media a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.social-media img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Ajustes para dispositivos móviles */
+@media screen and (max-width: 600px) {
+  .navbar {
+    padding: 5px 10px;
+  }
+
+  .navbar-logo {
+    display: none;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-item {
+    margin: 0 5px;
+  }
+
+  .welcome-section {
+    padding: 10px;
+  }
+
+  .welcome-section h1 {
+    font-size: 20px;
+    padding: 8px;
+  }
+
+  .welcome-section p {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+
+  .welcome-section a.btn {
+    padding: 8px 16px;
+  }
+}

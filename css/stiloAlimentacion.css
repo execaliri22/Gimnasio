@@ -1,0 +1,101 @@
+.texto {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #d7d6d6;
+    text-align: justify;
+}
+
+.texto p:first-child {
+    font-weight: bold;
+}
+
+.texto p:last-child {
+    font-style: italic;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    color: #c9c9c9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    color: #f50000;
+}
+
+/* Estilos para los enlaces */
+a {
+    color: #ff0000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para los párrafos */
+p {
+    margin-bottom: 15px;
+}
+
+/* Estilos para las listas */
+ul, ol {
+    margin-bottom: 15px;
+}
+
+/* Estilos para los títulos */
+h2 {
+    color: #a8a8a8;
+    border-bottom: 2px solid #a0a0a0;
+    padding-bottom: 5px;
+}
+
+/* Estilos para los elementos resaltados */
+strong {
+    color: #FF5733;
+}
+.boton-inicio {
+    display: inline-block;
+    background-color: #525252; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    text-decoration: none;
+    padding: 8px 10px; /* Espaciado interno del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 2px solid #000000; /* Borde del botón */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Transición suave */
+}
+
+.boton-inicio:hover {
+    background-color: #fff; /* Color de fondo del botón al pasar el mouse */
+    color: #686868; /* Color del texto del botón al pasar el mouse */
+    border-color: #474747; /* Borde del botón al pasar el mouse */
+}
+
+body {
+    background-image: url('https://wallpaperaccess.com/full/2796403.jpg'); /* Ruta de tu imagen de fondo */
+    background-size: cover; /* Cubrir toda la ventana del navegador */
+    background-position: center; /* Centrar la imagen de fondo */
+    background-repeat: no-repeat; /* No repetir la imagen */
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-image: url('https://www.thegymdowntownorlando.com/wp-content/uploads/2022/01/About-page-image-2.jpg'); 
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed; /* Fijar la imagen de fondo */
+      }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Locura por el Gym</title>
+  <link rel="stylesheet" href="css/stilo.css"> 
+</head>
+<body>
+  <nav class="navbar">
+    <li class="nav-item">
+      <img src="https://cdn.icon-icons.com/icons2/644/PNG/512/yellow_gym_icon-icons.com_59568.png" alt="Logo" class="navbar-logo">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a href="Suplementacion.html" class="nav-link">Suplementación</a></li>
+      <li class="nav-item"><a href="Alimentacion.html" class="nav-link">Alimentación</a></li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle">Productos</a>
+        <ul class="dropdown-menu">
+          <li><a href="Remeras.html" class="dropdown-item">Remeras</a></li>
+          <li><a href="Arnoldspl.html" class="dropdown-item">Pantalones</a></li>
+          <li><a href="creatu.html" class="dropdown-item">Medias</a></li>
+          <li><a href="creatu.html" class="dropdown-item">Suplementos</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle">Registrarse</a>
+        <ul class="dropdown-menu">
+          <li class="dropdown-item">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+          </li>
+          <li class="dropdown-item">
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido">
+          </li>
+         
+          <li class="dropdown-item">
+            <label for="documentNumber">N° Documento:</label>
+            <input type="text" id="documentNumber" name="documentNumber">
+          </li>
+          <li class="dropdown-item">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+          </li>
+          <li class="dropdown-item">
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password">
+          </li>
+          <li class="dropdown-item">
+            <button type="button" onclick="guardarDatos()">Guardar</button>
+          </li>
+        </ul>
+      </li>
+      
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle" id="loginButton">Iniciar Sesión</a>
+        <ul class="dropdown-menu" id="loginDropdown">
+          <li class="dropdown-item">
+            <label for="loginEmail">Email:</label>
+            <input type="email" id="loginEmail" name="loginEmail">
+          </li>
+          <li class="dropdown-item">
+            <label for="loginPassword">Contraseña:</label>
+            <input type="password" id="loginPassword" name="loginPassword">
+          </li>
+          <li class="dropdown-item">
+            <button type="button" onclick="iniciarSesion()">Iniciar Sesión</button>
+          </li>
+        </ul>
+      </li>
+   
+    </ul>
+  </nav>
+
+<div class="welcome-section">
+  <h1 class="animated-title">¡Bienvenidos a Locura por el Gym!</h1>
+  <p><strong>¡Hola, guerreros del fitness, adictos al entrenamiento y amantes de la transformación física!</strong> Es un placer darles la bienvenida a nuestra casa, donde la pasión por el gimnasio alcanza niveles de absoluta Locura.</p>
+  <p>Locura por el Gym no es solo otro sitio web, ¡es un santuario donde la dedicación se encuentra con la obsesión!</p>
+
+</div>
+
+
+<footer>
+  <p>&copy; 2024 Locura por el Gym. Todos los derechos reservados.</p>
+  <div class="social-media">
+    <a href="#"><img src="images/s1.svg" alt="Facebook"></a>
+    <a href="#"><img src="images/s2.svg" alt="Twitter"></a>
+    <a href="#"><img src="images/s3.svg" alt="Instagram"></a>
+  </div>
+</footer>
+
+<script src="JS/script.js"></script>
+</body>
+</html>
