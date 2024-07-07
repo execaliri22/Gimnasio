@@ -2,21 +2,15 @@ package com.irojas.apirest.Person;
 
 import com.irojas.apirest.Document.Document;
 import com.irojas.apirest.Product.Product;
+import com.irojas.apirest.Gym.Gym;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
+import java.util.Set;
 
 @Data
 @AllArgsConstructor
@@ -40,5 +34,11 @@ public class Person {
     @OneToMany(mappedBy = "person", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Product> products;
 
-
+    @ManyToMany
+    @JoinTable(
+        name = "person_gym",
+        joinColumns = @JoinColumn(name = "person_id"),
+        inverseJoinColumns = @JoinColumn(name = "gym_id")
+    )
+    private Set<Gym> gyms;
 }
