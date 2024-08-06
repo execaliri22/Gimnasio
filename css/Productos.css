@@ -5,17 +5,29 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Fijar la imagen de fondo */
+    background-attachment: fixed; 
     color: #fff;
   }
   
   /* Barra de navegación */
+  .search-bar-container {
+    display:flex;
+    align-items:normal;
+    margin-left: 400px;
+    
+}
+
+#search-bar {
+    padding: 5px 20px ;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
   .navbar {
     background-color: rgba(57, 57, 57, 0.897);
     padding: 10px 20px;
     display: flex;
     align-items: center;
-    justify-content: center; /* Centrar los elementos del menú */
+    justify-content: center; 
     position: relative;
   }
   
@@ -88,6 +100,7 @@ body {
 
 
   .submenu{
+    margin-right:420px ;
     left: 550px;
     position:relative;
 }
@@ -129,6 +142,7 @@ th, td{
     color: #ffffff;
     border-radius: 5px;
     font-size: 15px;
+    cursor:pointer;
 
 }
 
@@ -139,10 +153,11 @@ th, td{
     margin: 0;
     animation: fadeIn 2s ease-in-out;
     padding-bottom: 70px;
-    padding-left: 700px;
+    padding-left: 655px;
     padding-top: 70px;
     border-radius: 10px;
     background-color: #111111ab;
+    margin-right: 5px;
     
     }
 
@@ -166,6 +181,7 @@ th, td{
     width: 250px;
     height: 370px;
     margin-bottom: 20px;
+    border-radius: 5px;
  }
  .product h3{
     background-color: #0b000086;

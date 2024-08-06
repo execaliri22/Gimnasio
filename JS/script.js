@@ -80,47 +80,15 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Error:', error);
         alert('Error al guardar los datos');
     });
-}
+} 
+
+
 
 
 
 //inicio sesios
 
-function iniciarSesion() {
-  const email = document.getElementById('loginEmail').value;
-  const password = document.getElementById('loginPassword').value;
 
-  const data = { email: email, password: password };
-
-  fetch('http://localhost:8080/login', {
-      method: 'POST',
-      headers: {
-          'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-  })
-  .then(response => {
-      if (response.ok) {
-          return response.json();
-      } else {
-          throw new Error('Credenciales incorrectas');
-      }
-  })
-  .then(user => {
-      alert('Inicio de sesión exitoso');
-      console.log('Usuario:', user);
-
-      // Aquí puedes redirigir al usuario o guardar el estado de sesión
-      window.location.href = 'usuario.html'; // Cambia 'dashboard.html' por tu ruta deseada
-
-     
-
-  })
-  .catch(error => {
-      console.error('Error:', error);
-      alert('Error al iniciar sesión');
-  });
-}
 
 
 
