@@ -4,6 +4,7 @@ package com.irojas.apirest.Gym;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.irojas.apirest.Person.Person;
 
 import jakarta.persistence.Entity;
@@ -23,6 +24,7 @@ public class Gym {
     private String location;
 
     @ManyToMany(mappedBy = "gyms")
+    @JsonIgnore
     private Set<Person> persons = new HashSet<>();
 
     // Constructor vacío necesario para JPA

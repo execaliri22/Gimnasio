@@ -7,6 +7,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.irojas.apirest.Person.Person;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -27,7 +28,7 @@ public class Document {
 
     @OneToOne
     @JoinColumn(name = "person_id")
-   
+    @JsonBackReference 
        private Person person;
 }
 
