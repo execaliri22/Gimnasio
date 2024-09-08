@@ -6,6 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
+
 import com.irojas.apirest.Person.Person;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -26,7 +27,8 @@ public class Document {
 
     @OneToOne
     @JoinColumn(name = "person_id")
-    private Person person;
+   
+       private Person person;
 }
 
 

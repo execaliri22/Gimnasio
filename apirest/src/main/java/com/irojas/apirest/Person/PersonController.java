@@ -1,13 +1,12 @@
 package com.irojas.apirest.Person;
 
-import com.irojas.apirest.Gym.Gym;
 import com.irojas.apirest.Product.Product;
+import com.irojas.apirest.Gym.Gym;
 
-import org.springframework.http.ResponseEntity;//se utiliza para construir respuestas HTTP 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Set;
 
 @RestController
 @RequestMapping("/person")
@@ -24,9 +23,9 @@ public class PersonController {
         personService.createPerson(person);
     }
 
-        @GetMapping// @GetMapping: Indica que este método responderá a solicitudes HTTP GET. Es para obtener información.
-    public ResponseEntity<List<Person>> getAllPersons() {//El método devuelve una respuesta que incluye el cuerpo (una lista de personas)
-        List<Person> persons = personService.getAllPersons(); // Llama a un servicio que obtiene la lista de todas las personas desde la base de datos.
+    @GetMapping
+    public ResponseEntity<List<Person>> getAllPersons() {
+        List<Person> persons = personService.getAllPersons();
         return ResponseEntity.ok(persons);
     }
 
@@ -35,11 +34,11 @@ public class PersonController {
         personService.deletePerson(personId);
     }
 
-
-    
-    @PostMapping("/{personId}/products")
-    public void addProductToPerson(@PathVariable Integer personId, @RequestBody Product product) {
-        personService.addProductToPerson(personId, product);
+    // Asociar un producto con una persona usando IDs
+    @PostMapping("/{personId}/products/{productId}")
+    public ResponseEntity<Void> addProductToPerson(@PathVariable Integer personId, @PathVariable Integer productId) {
+        personService.addProductToPerson(personId, productId);
+        return ResponseEntity.noContent().build();
     }
 
     @GetMapping("/{personId}/products")
@@ -52,20 +51,21 @@ public class PersonController {
         personService.deleteProductFromPerson(personId, productId);
     }
 
+    // Métodos para manejar la relación con Gym
 
-    @PostMapping("/{personId}/gyms")
-    public void addGymToPerson(@PathVariable Integer personId, @RequestBody Gym gym) {
-        personService.addGymToPerson(personId, gym);
+    @PostMapping("/{personId}/gyms/{gymId}")
+    public void addGymToPerson(@PathVariable Integer personId, @PathVariable Long gymId) {
+        personService.addGymToPerson(personId, gymId);
     }
 
     @GetMapping("/{personId}/gyms")
-    public Set<Gym> getPersonGyms(@PathVariable Integer personId) {
-        return personService.getPersonGyms(personId);
+    public ResponseEntity<List<Gym>> getPersonGyms(@PathVariable Integer personId) {
+        List<Gym> gyms = personService.getPersonGyms(personId);
+        return ResponseEntity.ok(gyms);
     }
 
     @DeleteMapping("/{personId}/gyms/{gymId}")
-    public void deleteGymFromPerson(@PathVariable Integer personId, @PathVariable Integer gymId) {
-        personService.deleteGymFromPerson(personId, gymId);
+    public void removeGymFromPerson(@PathVariable Integer personId, @PathVariable Long gymId) {
+        personService.removeGymFromPerson(personId, gymId);
     }
-    
-}
+} 
