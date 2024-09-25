@@ -86,20 +86,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-//inicio sesios
-
-
-
-
-
-
-//nombre del usuario
-
-
-
-
-
-
 
 
   

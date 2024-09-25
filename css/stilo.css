@@ -5,17 +5,17 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* Fijar la imagen de fondo */
+  background-attachment: fixed; 
   color: #fff;
 }
 
-/* Barra de navegación */
+
 .navbar {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 10px 20px;
   display: flex;
   align-items: center;
-  justify-content: center; /* Centrar los elementos del menú */
+  justify-content: center; 
   position: relative;
 }
 
@@ -163,18 +163,18 @@ footer {
   padding: 20px 0 0 0;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; /* Permitir que las filas se envuelvan */
+  flex-wrap: wrap; 
 }
 
 .ofert-1 {
   display: flex;
   align-items: center;
-  flex-basis: calc(29.3% - 40px); /* Ajustar el ancho para la separación */
+  flex-basis: calc(29.3% - 40px); 
   background-color: #f5f5f51b;
   padding: 35px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el contenedor */
-  border-radius: 10px; /* Bordes redondeados para el contenedor */
-  margin: 15px; /* Separación alrededor de cada contenedor */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; 
+  margin: 15px; 
 }
 
 .ofert-img {
@@ -184,10 +184,10 @@ footer {
 }
 
 .ofert-img img {
-  width: 140%; /* Ajustado para ocupar todo el espacio disponible */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra alrededor de la imagen */
-  border-radius: 10px; /* Bordes redondeados para la imagen */
-  margin-bottom: 15px; /* Separación debajo de la imagen */
+  width: 140%; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  border-radius: 10px; 
+  margin-bottom: 15px; 
 }
 
 .ofert-txt {
@@ -221,7 +221,6 @@ footer {
 
 
 
-/* Ajustes para dispositivos móviles */
 @media screen and (max-width: 600px) {
   .navbar {
     padding: 5px 10px;
